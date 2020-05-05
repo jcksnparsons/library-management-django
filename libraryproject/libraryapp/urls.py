@@ -14,5 +14,6 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('logout/', logout_user, name='logout'),
     path('book/form', book_form, name='book_form'),
-    path('library/form', library_form, name='library_form')
+    path('library/form', library_form, name='library_form'),
+    path('books/<int:book_id>/form/', book_edit_form, name='book_edit_form')
 ]
