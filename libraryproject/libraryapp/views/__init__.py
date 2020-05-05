@@ -4,4 +4,5 @@ from .libraries.list import list_libraries
 from .auth.logout import logout_user
 from .home import home
 from .books.form import book_form
+from .books.details import book_details
 from .libraries.form import library_form
