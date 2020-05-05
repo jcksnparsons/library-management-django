@@ -31,7 +31,7 @@
           <label for="location">Library: </label>
           <select id="location" type="text" name="location">
                 {% for library in all_libraries %}
-                    <option value="{{ library.id }}">{{ library.title }}</option>
+                    <option value="{{ library.id }}">{{ library.name }}</option>
                 {% endfor %}
           </select>
       </fieldset>
