@@ -6,3 +6,4 @@ from .home import home
 from .books.form import book_form
 from .books.details import book_details
 from .libraries.form import library_form
+from .libraries.details import library_details

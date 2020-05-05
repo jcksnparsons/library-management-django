@@ -7,6 +7,7 @@ urlpatterns = [
     path('', home, name='home'),
     path('books/', book_list, name='books'),
     path('books/<int:book_id>/', book_details, name='book'),
+    path('libraries/<int:library_id>/', library_details, name="library"),
     path('librarians/', list_librarians, name='librarians'),
     path('libraries/', list_libraries, name='libraries'),
     path('accounts/', include('django.contrib.auth.urls')),
