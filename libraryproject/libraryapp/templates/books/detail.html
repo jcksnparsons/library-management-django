@@ -4,7 +4,9 @@
   <h2>By {{ book.author }}</h2>
 
   <div>Published in {{ book.year_published }}</div>
-  <div>ISBN: {{ book.ISBN_num }}</div>
+  <div>ISBN: {{ book.isbn }}</div>
+  <div>Located in the {{ book.location.name }}</div>
+  <div>Registered by {{ book.librarian.first_name }} {{ book.librarian.last_name }}</div>
 </section>
 
 <section id="book-actions" style="display: flex;">
