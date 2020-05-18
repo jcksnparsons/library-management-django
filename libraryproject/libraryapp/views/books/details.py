@@ -11,8 +11,9 @@ def get_book(book_id):
 
 @login_required
 def book_details(request, book_id):
+    book = get_book(book_id)
     if request.method == 'GET':
-        book = get_book(book_id)
+        
         template_name = 'books/detail.html'
         return render(request, template_name, {'book': book})
 
@@ -24,7 +25,6 @@ def book_details(request, book_id):
             "actual_method" in form_data
             and form_data["actual_method"] == "PUT"
         ):
-            book = Book.objects.get(pk=book_id)
             book.title = form_data['title']
             book.author = form_data['author']
             book.ISBN_num = form_data['ISBN_num']
@@ -43,7 +43,6 @@ def book_details(request, book_id):
             "actual_method" in form_data
             and form_data["actual_method"] == "DELETE"
         ):
-            book = Book.objects.get(pk=book_id)
             book.delete()
             
             return redirect(reverse('libraryapp:books'))
