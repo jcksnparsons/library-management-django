@@ -1,6 +1,6 @@
 import sqlite3
 from django.shortcuts import render
-from libraryapp.models import Librarian, model_factory
+from libraryapp.models import Librarian
 from ..connection import Connection
 from django.contrib.auth.decorators import login_required
 

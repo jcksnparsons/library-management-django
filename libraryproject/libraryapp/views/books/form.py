@@ -3,7 +3,6 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from libraryapp.models import Book
 from libraryapp.models import Library
-from libraryapp.models import model_factory
 from ..connection import Connection
 from .details import get_book
 
